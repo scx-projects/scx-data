@@ -2,7 +2,7 @@ package cool.scx.data.test;
 
 import cool.scx.data.Finder;
 import cool.scx.data.exception.DataAccessException;
-import cool.scx.functional.ScxConsumer;
+import cool.scx.function.ConsumerX;
 
 import java.util.List;
 import java.util.Map;
@@ -25,17 +25,17 @@ public class TestFinder<T> implements Finder<T> {
     }
 
     @Override
-    public <E extends Throwable> void forEach(ScxConsumer<T, E> entityConsumer) throws DataAccessException, E {
+    public <X extends Throwable> void forEach(ConsumerX<T, X> entityConsumer) throws DataAccessException, X {
 
     }
 
     @Override
-    public <T1, E extends Throwable> void forEach(ScxConsumer<T1, E> entityConsumer, Class<T1> resultType) throws DataAccessException, E {
+    public <T1, X extends Throwable> void forEach(ConsumerX<T1, X> entityConsumer, Class<T1> resultType) throws DataAccessException, X {
 
     }
 
     @Override
-    public <E extends Throwable> void forEachMap(ScxConsumer<Map<String, Object>, E> entityConsumer) throws DataAccessException, E {
+    public <X extends Throwable> void forEachMap(ConsumerX<Map<String, Object>, X> entityConsumer) throws DataAccessException, X {
 
     }
 
