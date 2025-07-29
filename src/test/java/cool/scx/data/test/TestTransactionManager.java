@@ -2,40 +2,40 @@ package cool.scx.data.test;
 
 import cool.scx.data.context.TransactionManager;
 import cool.scx.data.exception.DataAccessException;
-import cool.scx.functional.ScxCallable;
-import cool.scx.functional.ScxConsumer;
-import cool.scx.functional.ScxFunction;
-import cool.scx.functional.ScxRunnable;
+import cool.scx.function.CallableX;
+import cool.scx.function.ConsumerX;
+import cool.scx.function.FunctionX;
+import cool.scx.function.RunnableX;
 
 public class TestTransactionManager implements TransactionManager<TestTransactionContext> {
 
     @Override
-    public <T, E extends Throwable> T withTransaction(ScxFunction<TestTransactionContext, T, E> handler) throws DataAccessException, E {
+    public <T, X extends Throwable> T withTransaction(FunctionX<TestTransactionContext, T, X> handler) throws DataAccessException, X {
         return null;
     }
 
     @Override
-    public <E extends Throwable> void withTransaction(ScxConsumer<TestTransactionContext, E> handler) throws DataAccessException, E {
+    public <X extends Throwable> void withTransaction(ConsumerX<TestTransactionContext, X> handler) throws DataAccessException, X {
 
     }
 
     @Override
-    public <T, E extends Throwable> T autoTransaction(ScxCallable<T, E> handler) throws DataAccessException, E {
+    public <T, X extends Throwable> T autoTransaction(CallableX<T, X> handler) throws DataAccessException, X {
         return null;
     }
 
     @Override
-    public <E extends Throwable> void autoTransaction(ScxRunnable<E> handler) throws DataAccessException, E {
+    public <X extends Throwable> void autoTransaction(RunnableX<X> handler) throws DataAccessException, X {
 
     }
 
     @Override
-    public <T, E extends Throwable> T autoContext(ScxCallable<T, E> handler) throws DataAccessException, E {
+    public <V, X extends Throwable> V autoContext(CallableX<V, X> handler) throws DataAccessException, X {
         return null;
     }
 
     @Override
-    public <E extends Throwable> void autoContext(ScxRunnable<E> handler) throws DataAccessException, E {
+    public <X extends Throwable> void autoContext(RunnableX<X> handler) throws DataAccessException, X {
 
     }
 
