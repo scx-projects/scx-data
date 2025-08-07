@@ -88,7 +88,7 @@
     <properties>
 
         <!-- *********************** 以下为依赖包版本 *********************** -->
-        <scx-function.version>0.0.1</scx-function.version>
+        <scx-function.version>0.1.0</scx-function.version>
         <testng.version>7.10.2</testng.version>
 
     </properties>
