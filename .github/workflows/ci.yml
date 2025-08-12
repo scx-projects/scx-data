@@ -7,7 +7,7 @@ jobs:
     steps:
 
       - name: 签出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 安装 JDK
         uses: actions/setup-java@v4
